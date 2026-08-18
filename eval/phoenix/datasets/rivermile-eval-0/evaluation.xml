@@ -1,15 +1,9 @@
 <!--
 Evaluation question set for the USACE IWR River Mile Marker MCP server.
 
-IMPORTANT: The <answer> values below are PLACEHOLDERS. They must be verified
-against the LIVE service before use, because this sandbox blocks outbound
-network access to services7.arcgis.com (HTTP 403 / policy deny), so answers
-could not be computed at authoring time.
-
-To fill in / verify answers, run the smoke-test helper from a network with
-access to the service:
-
-    uv run python scripts/verify_live.py
+Answers were verified against the LIVE service on 2026-08-18 via
+`uv run python scripts/verify_live.py`. Re-run that helper to re-verify if the
+upstream dataset changes.
 
 Each question is independent, read-only, and answerable with the three tools:
   - usace_rivermile_nearest
@@ -19,27 +13,27 @@ Each question is independent, read-only, and answerable with the three tools:
 <evaluation>
   <qa_pair>
     <question>How many river mile markers in the USACE River Mile Marker dataset lie on the Red River? Provide the total count.</question>
-    <answer>TODO_VERIFY</answer>
+    <answer>339</answer>
   </qa_pair>
   <qa_pair>
     <question>On the Red River, how many markers have a river mile value between 100 and 120 inclusive?</question>
-    <answer>TODO_VERIFY</answer>
+    <answer>21</answer>
   </qa_pair>
   <qa_pair>
     <question>What is the river name and river mile of the marker closest to latitude 31.453, longitude -92.709?</question>
     <answer>RED, mile 111</answer>
   </qa_pair>
   <qa_pair>
-    <question>Searching within 5 km of latitude 31.42, longitude -92.69, what is the river mile of the single nearest marker?</question>
-    <answer>TODO_VERIFY</answer>
+    <question>Within a 2 km radius of latitude 31.453, longitude -92.709, how many river mile markers are present?</question>
+    <answer>3</answer>
   </qa_pair>
   <qa_pair>
-    <question>For markers on the Red River, what is the lowest (minimum) river mile value present in the dataset?</question>
-    <answer>TODO_VERIFY</answer>
+    <question>Inside the bounding box with minimum corner (-92.72, 31.40) and maximum corner (-92.66, 31.46) in lon/lat, how many river mile markers fall within it?</question>
+    <answer>5</answer>
   </qa_pair>
   <qa_pair>
-    <question>For markers on the Red River, what is the highest (maximum) river mile value present in the dataset?</question>
-    <answer>TODO_VERIFY</answer>
+    <question>List the river mile values of every marker inside the bounding box with minimum corner (-92.72, 31.40) and maximum corner (-92.66, 31.46) in lon/lat, in ascending order.</question>
+    <answer>107, 108, 109, 110, 111</answer>
   </qa_pair>
   <qa_pair>
     <question>What data SOURCE is recorded for the Red River marker at river mile 108?</question>
@@ -50,11 +44,11 @@ Each question is independent, read-only, and answerable with the three tools:
     <answer>RD</answer>
   </qa_pair>
   <qa_pair>
-    <question>Within a 2 km radius of latitude 31.453, longitude -92.709, how many river mile markers are present?</question>
-    <answer>TODO_VERIFY</answer>
+    <question>What is the RIVER_NUMB (internal river number) assigned to the Red River in this dataset?</question>
+    <answer>25</answer>
   </qa_pair>
   <qa_pair>
-    <question>Inside the bounding box with minimum corner (-92.72, 31.40) and maximum corner (-92.66, 31.46) in lon/lat, how many markers fall within it, and what are their river mile values?</question>
-    <answer>TODO_VERIFY</answer>
+    <question>What is the SOURCE value of the Red River marker at river mile 112, the marker immediately upstream of mile 111?</question>
+    <answer>IENC</answer>
   </qa_pair>
 </evaluation>

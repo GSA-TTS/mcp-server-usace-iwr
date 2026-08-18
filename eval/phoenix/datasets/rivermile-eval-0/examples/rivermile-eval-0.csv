@@ -1,0 +1,11 @@
+query,responses
+"How many river mile markers in the USACE River Mile Marker dataset lie on the Red River? Provide the total count.","339"
+"On the Red River, how many markers have a river mile value between 100 and 120 inclusive?","21"
+"What is the river name and river mile of the marker closest to latitude 31.453, longitude -92.709?","RED, mile 111"
+"Within a 2 km radius of latitude 31.453, longitude -92.709, how many river mile markers are present?","3"
+"Inside the bounding box with minimum corner (-92.72, 31.40) and maximum corner (-92.66, 31.46) in lon/lat, how many river mile markers fall within it?","5"
+"List the river mile values of every marker inside the bounding box with minimum corner (-92.72, 31.40) and maximum corner (-92.66, 31.46) in lon/lat, in ascending order.","107, 108, 109, 110, 111"
+"What data SOURCE is recorded for the Red River marker at river mile 108?","IENC"
+"What is the RIVER_CODE for the Red River in this dataset?","RD"
+"What is the RIVER_NUMB (internal river number) assigned to the Red River in this dataset?","25"
+"What is the SOURCE value of the Red River marker at river mile 112, the marker immediately upstream of mile 111?","IENC"
