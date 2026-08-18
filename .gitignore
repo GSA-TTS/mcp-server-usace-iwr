@@ -1,0 +1,16 @@
+src/usace_iwr_server/__pycache__/
+src/usace_iwr_server/tools/__pycache__/
+eval/__pycache__/
+__pycache__/
+
+.venv/
+
+# ignore secrets
+secrets/
+.env
+
+# ignore build artifacts
+src/*.egg-info/
+
+# ignore local scripts
+.databricks
